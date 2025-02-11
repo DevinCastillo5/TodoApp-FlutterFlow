@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "users": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z0-9_-]+$": {
+          "type": "object",
+          "properties": {
+            "birthdate": { "type": "string", "format": "date-time" },
+            "created_time": { "type": "string", "format": "date-time" },
+            "display_name": { "type": "string" },
+            "email": { "type": "string", "format": "email" },
+            "photo_url": { "type": "string", "format": "uri" },
+            "uid": { "type": "string" },
+            "quote": { "type": "string" }
+          },
+          "required": ["uid", "display_name", "email", "created_time"]
+        }
+      }
+    },
+    "tasks": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z0-9_-]+$": {
+          "type": "object",
+          "properties": {
+            "title": { "type": "string" },
+            "description": { "type": "string" },
+            "due_date": { "type": "string", "format": "date-time" },
+            "completed": { "type": "boolean" },
+            "created_time": { "type": "string", "format": "date-time" },
+            "user_id": { "type": "string" }
+          },
+          "required": ["title", "created_time", "user_id"]
+        }
+      }
+    }
+  }
+}
