@@ -370,7 +370,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                   fontFamily: 'Inter',
                                   letterSpacing: 0.0,
                                 ),
-                            hintText: 'Favorite Quote',
+                            hintText: 'Your Favorite Quote...',
                             hintStyle: FlutterFlowTheme.of(context)
                                 .labelLarge
                                 .override(
